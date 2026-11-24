@@ -84,6 +84,15 @@ La web publicada en <https://jpolanco.es/> se despliega con **Cloudflare Pages**
 
 Este repositorio del ejercicio contiene la versión adaptada del código y no está conectado a ese proyecto de Cloudflare. Como es una web estática, se podría desplegar de la misma forma: bastaría con conectar el repositorio y publicar su carpeta raíz.
 
+## Metodología de trabajo (ODD y SDD)
+
+En mi web personal real trabajo con dos metodologías de desarrollo asistido por IA. **No están aplicadas en este repositorio**, que es un ejercicio pequeño y acotado, pero las menciono porque son el método con el que he construido la web de la que parte:
+
+- **ODD (*Organic Driven Development*):** es la vía por defecto. El esfuerzo de documentación es proporcional a lo que se entiende y se arriesga en el cambio: en los cambios pequeños basta con una Pull Request bien explicada; en los sustanciales se escribe antes un documento breve.
+- **SDD (*Spec-Driven Development*):** desarrollo dirigido por especificación. Para funcionalidades nuevas, decisiones de arquitectura, hosting, datos personales o seguridad, primero se redacta una especificación con requisitos, yo la valido y solo después se planifica y se programa.
+
+Ambas comparten las mismas reglas: una rama por cada cambio, Pull Request revisada por mí antes de fusionar, verificación real del resultado y un documento de estado del proyecto siempre actualizado. En este ejercicio se ha seguido solo la parte de las ramas y la Pull Request.
+
 ## Ejecutarlo en local
 
 Hace falta [Node.js](https://nodejs.org/).
