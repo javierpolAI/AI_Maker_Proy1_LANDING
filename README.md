@@ -2,16 +2,18 @@
 
 Este repositorio es mi entrega del **Proyecto 1 del programa AI Maker de The Power**: una landing page personal **sin backend y sin base de datos**, hecha solo con HTML, CSS y herramientas.
 
-- **Página publicada:** <https://javierpolai.github.io/AI_Maker_Proy1_LANDING/>
+- **Página para visualizar (URL pública):** <https://jpolanco.es/>
 - **Código:** <https://github.com/javierpolAI/AI_Maker_Proy1_LANDING>
 
-La página es una versión reducida y adaptada de mi web personal real, [jpolanco.es](https://jpolanco.es/). Aquí he dejado solo lo necesario para el ejercicio: presentación, sobre mí, experiencia, formación, aptitudes y contacto.
+> **Nota sobre la URL y el código.** La URL pública es mi web personal real, desplegada con **Cloudflare Pages** (ver [Despliegue](#despliegue)). El código de este repositorio es una **versión reducida y adaptada** de esa web para el ejercicio: mismo contenido de base, pero con menos secciones y con el diseño reescrito con Tailwind (la web publicada usa CSS propio). Por eso ambos no coinciden de forma literal.
+
+Aquí he dejado solo lo necesario para el ejercicio: presentación, sobre mí, experiencia, formación, aptitudes y contacto.
 
 ## Qué pedía el ejercicio y cómo lo cumple
 
 | Requisito | Cómo se cumple |
 |---|---|
-| Página desplegada en una URL pública | Publicada con **GitHub Pages**, que sirve los archivos del repositorio tal cual (rama `main`, carpeta raíz). |
+| Página desplegada en una URL pública | Mi web está publicada en <https://jpolanco.es/> con **Cloudflare Pages**. Este repositorio es su adaptación para el ejercicio (ver nota y [Despliegue](#despliegue)). |
 | Estructura HTML semántica | `header`, `nav`, `main`, `section`, `article`, `ol`/`ul`, `time` y `footer`. Detalle abajo. |
 | Diseño responsive | Móvil primero, con puntos de corte de Tailwind (`sm`, `md`). Detalle abajo. |
 | Estilos con Tailwind | Tailwind CSS v4: todo el diseño está en clases dentro de `index.html`. No hay CSS escrito a mano. |
@@ -35,10 +37,10 @@ Es una web **estática**: no hay servidor que ejecute código ni base de datos. 
 Flujo de trabajo:
 
 ```
-index.html + src/input.css  ──(Tailwind CLI)──►  css/styles.css  ──►  GitHub Pages
+index.html + src/input.css  ──(Tailwind CLI)──►  css/styles.css  ──►  hosting estático
 ```
 
-Tailwind lee las clases que uso en `index.html` y genera un CSS con **solo** lo necesario (unos 16 KB). Ese CSS generado se sube al repositorio, de modo que GitHub Pages no necesita compilar nada. La página no usa JavaScript.
+Tailwind lee las clases que uso en `index.html` y genera un CSS con **solo** lo necesario (unos 16 KB). Ese CSS generado se sube al repositorio, de modo que cualquier hosting estático puede servir la página sin compilar nada. La página no usa JavaScript.
 
 ## Cómo está hecho
 
@@ -66,8 +68,21 @@ Cada parte de la página usa la etiqueta que describe lo que es, no solo `div`:
 - **HTML y CSS** como base.
 - **Tailwind CSS** para los estilos.
 - **Node.js y npm**, solo en desarrollo, para ejecutar Tailwind.
-- **Git y GitHub** para el control de versiones y el repositorio; **GitHub Pages** para publicar.
+- **Git y GitHub** para el control de versiones y el repositorio.
+- **Cloudflare Pages** para publicar la web (ver [Despliegue](#despliegue)).
 - **Claude Code** (IA) como asistente para adaptar la landing a este ejercicio, siguiendo mis indicaciones y revisando el resultado, en línea con el espíritu del programa.
+
+## Despliegue
+
+La web publicada en <https://jpolanco.es/> se despliega con **Cloudflare Pages**, un servicio que sirve sitios estáticos desde la red de Cloudflare:
+
+1. El código vive en un repositorio de GitHub conectado a un proyecto de Cloudflare Pages.
+2. Cada cambio que se fusiona en la rama principal (`main`) se publica automáticamente en producción, sin subir archivos a mano.
+3. Las demás ramas generan una **vista previa** para revisar los cambios antes de publicarlos.
+4. Solo se publica una carpeta con los archivos de la web (HTML, CSS e imágenes); el resto del repositorio no se expone.
+5. El dominio `jpolanco.es` está gestionado con DNS de Cloudflare y apunta a ese proyecto.
+
+Este repositorio del ejercicio contiene la versión adaptada del código y no está conectado a ese proyecto de Cloudflare. Como es una web estática, se podría desplegar de la misma forma: bastaría con conectar el repositorio y publicar su carpeta raíz.
 
 ## Ejecutarlo en local
 
