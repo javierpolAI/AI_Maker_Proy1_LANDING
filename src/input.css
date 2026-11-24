@@ -1,0 +1,16 @@
+/* Punto de entrada de Tailwind CSS (v4).
+   Tailwind lee las clases escritas en index.html y genera css/styles.css. */
+@import "tailwindcss";
+
+/* Dónde buscar clases. */
+@source "../index.html";
+
+/* Paleta propia: azul petróleo (acento) y vino (detalle puntual). */
+@theme {
+  --color-brand-50: #eef6f7;
+  --color-brand-100: #d5e8eb;
+  --color-brand-300: #8cc0c9;
+  --color-brand-600: #1b5e6b;
+  --color-brand-700: #154a55;
+  --color-wine: #7a2437;
+}
